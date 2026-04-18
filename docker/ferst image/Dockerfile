@@ -1,3 +1,4 @@
 FROM ubuntu:22.04
 
-CMD ["bash", "-c", "echo \"Это сделала Полина ТОРЧЕБАСКА!\"; tail -f /dev/null"]
+CMD echo "Это сделала Полина ЗАЛУПАСКА!"
+ENTRYPOINT ["sleep", "infinity"]
