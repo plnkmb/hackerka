@@ -16,7 +16,7 @@ log() {
 if [ ! -f "$CONFIG_FILE" ]; then
   cp "$CONFIG_TEMPLATE" "$CONFIG_FILE"
   APP_MODE_VALUE="$(pwgen -s 64 1)"
-  echo "APP_MODE=$APP_MODE_VALUE" > "$CONFIG_FILE"
+  sed -i "s|^APP_MODE=$|APP_MODE=$APP_MODE_VALUE|" "$CONFIG_FILE"
   log "config.env created"
 fi
 
