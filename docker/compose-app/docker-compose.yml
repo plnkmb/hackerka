@@ -2,26 +2,17 @@ version: '3.8'
 
 services:
   nginx:
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
-    image: nginx-image:v1
+    image: kambiy/nginx-image:v1
     ports:
       - "8080:80"
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-    image: frontend-image:v1
+    image: kambiy/frontend-image:v1
     expose:
       - "3000"
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    image: backend-image:v1
+    image: kambiy/backend-image:v1
     expose:
       - "8000"
 
