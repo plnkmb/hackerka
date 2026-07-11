@@ -1,0 +1,9 @@
+Дата запуска:
+Tue Jun 16 15:25:44 MSK 2026
+Текущая директория:
+/Users/pln.kmb/Documents/hackerka/docker/bash-script
+Текущий пользователь:
+pln.kmb
+Hostname:
+MacBook-Air-Polina.local
+Linux-дистрибутив:
