@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Compose Training App</title>
+</head>
+<body>
+  <h1>Compose Training App</h1>
+
+  <p>Это простой frontend-сервис.</p>
+  <p>Backend должен быть доступен через nginx по пути <code>/api/health</code>.</p>
+
+  <button onclick="checkBackend()">Проверить backend</button>
+
+  <pre id="result">Нажми кнопку для проверки API</pre>
+
+  <script>
+    async function checkBackend() {
+      const result = document.getElementById("result");
+
+      try {
+        const response = await fetch("/api/health");
+        const data = await response.json();
+        result.textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        result.textContent = "Backend недоступен: " + error;
+      }
+    }
+  </script>
+</body>
+</html>

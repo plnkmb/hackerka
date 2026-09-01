@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: kambiy/nginx-image:v1
+    ports:
+      - "8080:80"
+
+  frontend:
+    image: kambiy/frontend-image:v1
+    expose:
+      - "3000"
+
+  backend:
+    image: kambiy/backend-image:v1
+    expose:
+      - "8000"
+
